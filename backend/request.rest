@@ -1,0 +1,85 @@
+
+### GET Database
+GET http://localhost:5000/users
+###
+GET http://localhost:5000/suppliers
+###
+GET http://localhost:5000/stocks
+###
+
+### GET By Id Database
+GET http://localhost:5000/users/62716865cc53c06d1cbe35ea
+
+### 
+GET http://localhost:5000/stocks/6275e48fd87eacb8b10ba552
+
+
+### POST Database
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "nama_barang": "Printer",
+    "peminjam": "rizki",
+    "tgl_pinjam": "2022-05-03",
+    "tgl_kembali": "2022-05-13",
+    "status": "masih dipinjam"
+}
+###
+POST http://localhost:5000/suppliers
+Content-Type: application/json
+
+{
+    "nama_supplier": "UPT Pasir Putih",
+    "alamat": "jl.pasir putih",
+    "no_tlp": "081277932775"
+}
+###
+POST http://localhost:5000/stocks
+Content-Type: application/json
+
+{
+    "nama_barang": "Penggaris Kenko",
+    "jumlah": "3",
+    "nama_supplier_stock": "UPT Jakarta Pusat",
+    "tgl_masuk": "2022-05-03",
+    "kategori": "Stationery"
+}
+
+### Update Database
+PATCH http://localhost:5000/users/627215005e999cbff291ff75
+Content-Type: application/json
+
+{
+    "nama_supplier": "ASDAD",
+    "alamat": "DASA",
+    "no_tlp": "08127DAS7932775"
+}
+###
+PATCH http://localhost:5000/suppliers/627215005e999cbff291ff75
+Content-Type: application/json
+
+{
+    "nama_supplier": "ASDAD",
+    "alamat": "DASA",
+    "no_tlp": "081231"
+}
+
+###
+PATCH http://localhost:5000/stocks/62751d349d489a3c75b41aa4
+Content-Type: application/json
+
+{
+    "nama_barang": "Penggaris Kenko",
+    "jumlah": "3",
+    "nama_supplier_stock": "UPT Jakarta Pusat",
+    "tgl_masuk": "2022-05-03",
+    "kategori": "Stationery"
+}
+
+### Delete Database
+DELETE http://localhost:5000/users/6260df1079a1ece803c32b75
+###
+DELETE http://localhost:5000/suppliers/627215495e999cbff291ff79
+###
+DELETE http://localhost:5000/stocks/62751d349d489a3c75b41aa4
