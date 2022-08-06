@@ -1,0 +1,12 @@
+{
+  "homepage": "http://Rizkiaryapratama.github.io/AplikasiPergudanganUIP3B-PLN",
+  "dependencies": {
+    "concurrently": "^7.2.2"
+  },
+"scripts": {
+  "dev": "concurrently \"cd server && yarn start\" \"cd frontend && yarn start\" \"cd backend && yarn start\"",
+  "build": "concurrently \"cd server && yarn build\" \"cd frontend && yarn build\" \"cd backend && yarn build\"",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+}
